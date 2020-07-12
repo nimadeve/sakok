@@ -1,10 +1,10 @@
 {
-  "name": "sakok",
-  "version": "1.0.1",
+  "name": "sakokcli",
+  "version": "1.0.3",
   "description": "sakok command line",
   "main": "index.js",
   "bin": {
-    "sakok": "./index.js"
+    "sw": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
