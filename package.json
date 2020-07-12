@@ -1,0 +1,44 @@
+{
+  "name": "command",
+  "version": "1.0.1",
+  "description": "sakok command line",
+  "main": "index.js",
+  "bin": {
+    "sakok": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/sajadweb7/command.git"
+  },
+  "keywords": [
+    "cli",
+    "laravel",
+    "express"
+  ],
+  "author": "sajadweb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/sajadweb7/command/issues"
+  },
+  "homepage": "https://gitlab.com/sajadweb7/command#readme",
+  "dependencies": {
+    "@octokit/auth-basic": "^1.4.5",
+    "@octokit/rest": "^18.0.0",
+    "chalk": "^4.1.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "configstore": "^5.0.1",
+    "dotenv": "^8.2.0",
+    "figlet": "^1.4.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.3.1",
+    "lodash": "^4.17.19",
+    "minimist": "^1.2.5",
+    "save-dev": "0.0.1-security",
+    "simple-git": "^2.12.0",
+    "touch": "^3.1.0"
+  }
+}
