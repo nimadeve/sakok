@@ -1,6 +1,6 @@
-module.exports = {
-  init: (name) => {
-    return `import Joi from "@hapi/joi";
+const tools = require("./tools");
+const init = (name) => {
+  return `import Joi from "@hapi/joi";
 import {BAD_REQUEST} from "http-status-codes";
 
 const ${name}Validation = new class ${name.fUC()}ValidationClass extends Request {
@@ -91,5 +91,13 @@ const ${name}Validation = new class ${name.fUC()}ValidationClass extends Request
 
 export default ${name}Validation;
 `;
+};
+
+module.exports = {
+  init,
+  run: async ({ ilog, env, data, services, storeg, spinner }, node) => {
+    ilog("Init Request");
+    const make = "request";
+    tools.run({ ilog, env, data, services, storeg, spinner, node, make, init });
   },
 };

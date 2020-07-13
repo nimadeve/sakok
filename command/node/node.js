@@ -1,6 +1,12 @@
 const { trim, get } = require("lodash");
 const Types = require("./enum/index");
 const rest = require("./rest");
+const model = require("./model");
+const repository = require("./repository");
+const helper = require("./helper");
+const request = require("./request");
+const route = require("./route");
+const controler = require("./controler");
 
 // // command-line user interaction
 const init = async ({ilog, env, data, services, storeg, spinner }) => {
@@ -9,7 +15,7 @@ const init = async ({ilog, env, data, services, storeg, spinner }) => {
     {
       name: "micro",
       type: "list",
-      choices: [Types.RF, Types.CTR, Types.MD, Types.REP, Types.RQ, Types.R],
+      choices: [Types.RF, Types.CTR, Types.MD, Types.REP, Types.RQ, Types.R,Types.H],
       default: Types.RF,
       message: "Choice your Node service from list:",
       validate: function (value) {
@@ -27,15 +33,17 @@ const init = async ({ilog, env, data, services, storeg, spinner }) => {
     case Types.RF:
       return rest.run({ilog, env, data, services, storeg, spinner},init);
     case Types.CTR:
-      return console.log(Types.CTR);
+      return controler.run({ilog, env, data, services, storeg, spinner},init);
     case Types.MD:
-      return console.log(Types.MD);
+      return model.run({ilog, env, data, services, storeg, spinner},init);
     case Types.REP:
-      return console.log(Types.REP);
+      return repository.run({ilog, env, data, services, storeg, spinner},init);
     case Types.RQ:
-      return console.log(Types.RQ);
+      return request.run({ilog, env, data, services, storeg, spinner},init);
     case Types.R:
-      return console.log(Types.R);
+      return route.run({ilog, env, data, services, storeg, spinner},init);
+    case Types.H:
+      return helper.run({ilog, env, data, services, storeg, spinner},init);
   }
 };
 module.exports = {

@@ -1,10 +1,10 @@
 {
   "name": "sakokcli",
-  "version": "1.0.3",
-  "description": "sakok command line",
+  "version": "1.0.4",
+  "description": "sakok cli is for init any projects",
   "main": "index.js",
   "bin": {
-    "sw": "./index.js"
+    "sakok": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,9 +16,9 @@
   "keywords": [
     "cli",
     "node",
-    "express"
+    "react"
   ],
-  "author": "sajadweb",
+  "author": "sajadweb<sajadweb7@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sajadweb/sakok/issues"
